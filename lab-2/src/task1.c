@@ -6,23 +6,34 @@
 double calculate(int n) {
     double result = 1.0;
     int operations = 0;
+    operations += 2;
 
     for(int i = 1; i <= n; i++) {
+        operations += 2; // increment and сompare
+
 		double numerator;
 
-        operations += 2;
         numerator = cos(i) + 1;
+        operations += 3;
 
 		double denominator = 0;
+        operations += 1;
 
         for(int j = 1; j <= i; j++) {
+            operations += 2; // increment and сompare
+
             operations += 2;
             denominator += sin(j);
+
         }
 
-        operations += 2;
+        operations += 1; // Break the cycle comparison
+
         result *= (numerator / denominator);
+        operations += 2;
     }
+
+    operations += 1; // Break the cycle comparison
 
     printf("Operations: %d\n ", operations);
 
