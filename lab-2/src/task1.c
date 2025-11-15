@@ -1,5 +1,5 @@
 # include <stdio.h>
-#include <math.h>
+# include <math.h>
 
 // Program that uses nested cycles to calculate the expression
 
