@@ -36,7 +36,7 @@ int main() {
 		// Left
 		for (j; j >= normalization; j--) {
 			usleep(1000);
-			printf("\033[%d;%dH%c", i+1, j+1, matrix[i][j]);
+			printf("\033[%d;%dH%c", i+2, j+1, matrix[i][j]);
 		};
 
 		j++;
@@ -44,7 +44,7 @@ int main() {
 		// Up
 		for (i; i >= normalization; i--) {
 			usleep(1000);
-			printf("\033[%d;%dH%c", i+1, j+1, matrix[i][j]);
+			printf("\033[%d;%dH%c", i+2, j+1, matrix[i][j]);
 		};
 
 		i++;
@@ -59,7 +59,7 @@ int main() {
 				return 0;
 			};
 
-			printf("\033[%d;%dH%c", i+1, j+1, matrix[i][j]);
+			printf("\033[%d;%dH%c", i+2, j+1, matrix[i][j]);
 		};
 
 		if (normalization == -1) {
@@ -71,7 +71,7 @@ int main() {
 		// Down
 		for (i; i <= (rows - 1) - normalization; i++) {
 			usleep(1000);
-			printf("\033[%d;%dH%c", i+1, j+1, matrix[i][j]);
+			printf("\033[%d;%dH%c", i+2, j+1, matrix[i][j]);
 		};
 
 		i--;
