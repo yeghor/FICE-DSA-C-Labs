@@ -5,7 +5,7 @@
 
 double calculate(int n) {
     double result = 1.0;
-    double  DPCache = 0.0;
+    double DPCache = 0.0;
     int operations = 0;
 
     for(int i = 1; i <= n; i++) {
