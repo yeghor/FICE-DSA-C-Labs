@@ -1,5 +1,6 @@
 *.exe
 *.pdf
+*.docx
 *.out
 *.app
 *.i*86
