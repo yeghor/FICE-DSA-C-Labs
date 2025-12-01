@@ -3,7 +3,7 @@
 
 // Matrix first row and last col most left element binary search implementation
 
-void createMatrix(bool ascending, int duplicates, int rows, int cols, int matrix[rows][cols]) {
+void createMatrix(bool ascending, int instances, int rows, int cols, int matrix[rows][cols]) {
 	int value;
 	if (!ascending) {
 		value = rows * cols;
@@ -11,19 +11,21 @@ void createMatrix(bool ascending, int duplicates, int rows, int cols, int matrix
     	value = 0;
 	}
 
-    int duplicateCounter = 0;
+	if (instances < 1) {
+		instances = 1;
+	}
+
+    int instancesCounter = 0;
 
     // Create matrix
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
 			matrix[i][j] = value;
 
-			if (!(duplicates == -1)) {
-		        duplicateCounter++;
-			}
+	        instancesCounter++;
 
-            if (duplicateCounter >= duplicates || duplicates == -1) {
-                duplicateCounter = 0;
+            if (instancesCounter >= instances || instances == 1) {
+                instancesCounter = 0;
     			if (!ascending) {
     				value -= 1;
     			} else {
@@ -50,8 +52,8 @@ int main() {
     int matrix[rows][cols];
 
 	bool ascending = true; // Set to true to create matrix with ascending matrix
-	int duplicates = 2; // Set to -1 to make matrix with unique only elements. Set to positive number to add amount of duplicates of each element
-	createMatrix(ascending, duplicates, rows, cols, matrix);
+	int instances = 1; // Set amount of each element instances. For example instances=2 -> 0, 0, 1, 1, 2, 2
+	createMatrix(ascending, instances, rows, cols, matrix);
 
     // Display matrix
     for (int i = 0; i < rows; i++) {
