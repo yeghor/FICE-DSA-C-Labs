@@ -7,8 +7,11 @@ Labs summaries:
 - Lab №2: Algorithms that calculate hardcoded expression that contains nested math operations, like:
   - $\sum_{i=1}^{n} a_i = a_1 + a_2 + \dots + a_n$
   - $\prod_{i=1}^{n} a_i = a_1 \cdot a_2 \cdot \dots \cdot a_n$
-  First algorithm uses **Nested Loops** approach, which has $O(n^2)$ time complexity, otherwise second algorithm uses **Dynamic Programing** simple memoization approach that is much more efficient and has $O(log(n))$ time complexity.
-- Lab №3: Inner spiral ordered matrix traversal with positioned elements printing. Algorithm travels through matrix and visualizes its path on console. 
+  First algorithm uses **Nested Loops** approach, which has $O(n^2)$ time complexity, otherwise second algorithm uses **Dynamic Programming** simple memoization approach that is much more efficient and has $O(log(n))$ time complexity.
+- Lab №3: Inner spiral ordered matrix traversal with positioned elements printing. Algorithm travels through matrix and visualizes its path on console.
+- Lab №4: Matrix binary *(most left variation)* search exclusively in the first row and the last column. With parametrized matrix creatation, allowing to control ascending/descending order and duplicates existense.
+
+All labs were completed by myself with minimal AI help.
 
 # Usage
 
